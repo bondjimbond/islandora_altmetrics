@@ -44,7 +44,8 @@ function islandora_badges_block_info() {
 /**
  * Implements hook_block_view().
  */
- 
+/* Commented out the Altmetrics section  because it doesn't seem to do anything. 
+* Note: what's wrong with it, and how is it different from the later copy? 
  //Altmetrics block
  
 function islandora_badges_altmetrics_block_view($delta) {
@@ -85,7 +86,7 @@ function islandora_badges_altmetrics_block_view($delta) {
       break;
   }
   return $to_render;
-}
+}  */
 
 // Scopus block
 
@@ -136,6 +137,7 @@ function islandora_badges_scopus_block_view($delta) {
 /**
  * Implements hook_block_info().
  */
+/*  Commented out because this is duplicated. Still works.
 function islandora_altmetrics_block_info() {
   return array(
     'islandora_altmetrics_altmetrics' => array(
@@ -147,9 +149,12 @@ function islandora_altmetrics_block_info() {
   );
 }
 
+*/
+
 /**
  * Implements hook_block_view().
  */
+/* This section works, while the stuff I did above doesn't. Commenting this out kills the Altmetric badge. */
 function islandora_altmetrics_block_view($delta) {
   $to_render = array();
 
@@ -189,3 +194,4 @@ function islandora_altmetrics_block_view($delta) {
   }
   return $to_render;
 }
+
